@@ -65,7 +65,7 @@ public class WaitNotifyExample {
             Thread consumerThread = new Thread(consumer);
             consumerThread.start();
 
-            Thread.sleep(1000); //Giving 5 secs for Producer to start
+            Thread.sleep(1000); //Giving 1 sec for Producer to start
 
             Producer producer = new Producer(message);
             Thread producerThread = new Thread(producer);
