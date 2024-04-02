@@ -44,4 +44,21 @@ public class Student implements Comparable<Student>, Serializable {
                 ", percentage=" + percentage +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Student student = (Student) obj;
+        return Double.compare(student.percentage, percentage) == 0 && name.equals(student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return 1;
+   }
 }
